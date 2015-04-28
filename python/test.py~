@@ -1,0 +1,6 @@
+import sys
+def xyz():
+   print "name: "
+
+if __name__ == '__main__':
+   xyz()

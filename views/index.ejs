@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Digit Recognizer</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="topPanel">
+				<div id="header">Digit Recognizer</div>
+				<div class="largeText">Draw any digit here:</div>
+				<div id="canvasDiv"></div>
+				<div id="buttons">
+					<button onclick="pixelArray()">Guess</button><br>
+					<button onclick="clearCanvas()">Clear</button>
+				</div>
+				<div class="largeText" id="output">Guess: </div>
+			</div>
+			
+			<div id="downsampleUser">
+				<canvas id="canvasUser" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas>
+			</div>
+			<!--<div id="status"></div>-->
+
+			<div id="canvasContainer">
+				<div id="downsample0" class="innerCanvas"><canvas id="canvas0" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text0">-</div></div>
+				<div id="downsample1" class="innerCanvas"><canvas id="canvas1" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text1">-</div></div>
+				<div id="downsample2" class="innerCanvas"><canvas id="canvas2" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text2">-</div></div>
+				<div id="downsample3" class="innerCanvas"><canvas id="canvas3" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text3">-</div></div>
+				<div id="downsample4" class="innerCanvas"><canvas id="canvas4" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text4">-</div></div>
+				<div id="downsample5" class="innerCanvas"><canvas id="canvas5" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text5">-</div></div>
+				<div id="downsample6" class="innerCanvas"><canvas id="canvas6" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text6">-</div></div>
+				<div id="downsample7" class="innerCanvas"><canvas id="canvas7" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text7">-</div></div>
+				<div id="downsample8" class="innerCanvas"><canvas id="canvas8" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text8">-</div></div>
+				<div id="downsample9" class="innerCanvas"><canvas id="canvas9" width="60" height="80" style="border:1px solid #d3d3d3;"></canvas><div id="text9">-</div></div>
+			</div>
+			
+			
+		</div>
+	<script type="text/javascript" src="js/canvasDraw.js"></script>
+	</body>
+</html>
+
