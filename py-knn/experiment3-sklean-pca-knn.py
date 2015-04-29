@@ -1,11 +1,16 @@
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import decomposition
 import numpy as np
-
+import csv
 PCA_COMPONENTS = 100
 
 
-def doWork(train, labels, test):
+def doWork():
+
+    train, labels = read_data("../data/train.csv")
+    test, tmpl = read_data("../data/output3.csv", test=True)
+    print tmpl
+
     print "Converting training set to matrix"
     X_train = np.mat(train)
 
@@ -30,6 +35,25 @@ def doWork(train, labels, test):
 
     return predictions
 
+def read_data(f, header=True, test=False):
+    data = []
+    labels = []
+
+    csv_reader = csv.reader(open(f, "r"), delimiter=",")
+    index = 0
+    for row in csv_reader:
+        index = index + 1
+        if header and index == 1:
+            continue
+
+        if not test:
+            labels.append(int(row[0]))
+            row = row[1:]
+
+        data.append(np.array(np.int64(row)))
+    return (data, labels)
+
+
 
 def write_to_file(predictions):
     f = open("output-pca-knn-skilearn-v3.csv", "w")
@@ -40,8 +64,6 @@ def write_to_file(predictions):
 
 
 if __name__ == '__main__':
-    from load_data import read_data
-    train, labels = read_data("../data/train.csv")
-    test, tmpl = read_data("../data/output3.csv", test=True)
-    print tmpl
-    print doWork(train, labels, test)
+
+  
+    print doWork()
