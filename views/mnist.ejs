@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Digit Recognizer</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:40px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:30px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-jf8k{background-color:#fe0000;color:#3531ff;text-align:center}
+.tg .tg-s6z2{text-align:center}
+</style>
+
+	</head>
+	<body>
+
+<table class="tg" style="width:83%;align:center">
+  <tr>
+    <th class="tg-jf8k">Digit</th>
+    <th class="tg-jf8k">MNIST sample data</th>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">0</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic0){%>
+    	<img src="<%=pic0[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">1</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic1){%>
+    	<img src="<%=pic1[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">2</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic2){%>
+    	<img src="<%=pic2[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">3</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic3){%>
+    	<img src="<%=pic3[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">4</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic4){%>
+    	<img src="<%=pic4[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">5</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic5){%>
+    	<img src="<%=pic5[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">6</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic6){%>
+    	<img src="<%=pic6[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">7</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic7){%>
+    	<img src="<%=pic7[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">8</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic8){%>
+    	<img src="<%=pic8[i]%>">
+    <%}%>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">9</td>
+    <td class="tg-s6z2">
+    <% for (var i in pic9){%>
+    	<img src="<%=pic9[i]%>">
+    <%}%>
+    </td>
+  </tr>
+</table>
+<a href="/">Digit Recognition using Euclidean Distance</a>
+<a href="/svm_recognizer">Digit Recognition using SVM</a>
+	</body>
+</html>

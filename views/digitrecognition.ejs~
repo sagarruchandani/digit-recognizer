@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Handwritten Digit Recognition</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+        <!-- <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+      	<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+  	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+  </head>
+  <body style="background-color: #FEF6E4;">
+<table>
+<tr>
+<td>
+ <div>
+            <canvas id="can" width="280" height="280" style="top:10%;left:10%;border:2px solid;"></canvas>
+          </div>
+</td>
+<td>
+  <div id=container style="overflow-x: hidden;">
+		<div class="row" >
+  			<div class="col-md-4">
+                <h3 style="font-family: webkit-pictograph;"><b>Draw any digit here: </b></h3>
+
+         
+
+          <div class="buttons" style="padding-left: 125px;">
+            <!--<div style="padding-bottom:5px;"><input type="checkbox" id="preprocessing"><span style="margin-left:5px;">Display Preprocessing</span></div>
+            <div style="padding-bottom:5px;"><input type="checkbox" id="scaleStrokeWidth" checked="true"><span style="margin-left:5px;">Scale Stroke Width</span></div> -->
+            <div style="float:left;"><input type="button" value="Guess" id="recognize" class="btn btn-default" size="23" onclick="recognize()"></div>
+            <div style="float:left;padding-right:10px;"><input type="button" value="Clear" id="clr" class="btn btn-default" size="23" onclick="erase()"></div>
+
+          </div>
+        </div>
+        </div>
+        </div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="header" style="font-size: 250%;padding-bottom: 20px;text-align: center;">Digit Recognizer</div>
+<br><a href="/mnist" style="float: left;padding-left: 60px;">View MNIST data set</a><br>
+<a href="/" style="float: left;padding-left: 60px;">Digit Recognition using Euclidean Distance</a><br>
+</td>
+<td>
+<div id=container style="overflow-x: hidden;">
+		<div class="row" >
+  			<div class="col-md-4">
+       
+             <!--<div style="float:left;font-size:200px;margin-left:0px;" id="nnOut"></div>
+		
+		       <table class="table"><tr><td>Digit</td><td>Probability</td></tr><tr><div id="predictionTable"> </div></tr></table>
+                -->
+<div id="fill_values" style="float:right;"></div>
+
+<div id="fill_values1" style="float:left;"></div>
+<div id="fill_values2" style="float:center;"></div>
+<div id="fill_values3" style="float:right;"></div>
+
+
+           </div>
+      </div>
+           </div>
+</td>
+</tr>
+
+</table>
+
+ 
+         
+
+ 
+   		<!--Footer-->
+  	<div class="footer">
+		<div class="navbar navbar-default navbar-fixed-bottom" style="height: 51px;">
+     		<div class="container">
+   			</div> <!-- container-->
+   		</div> <!-- navbar navbar-default navbar-fixed-bottom" -->
+   	</div>
+
+      <script type="text/javascript" src="/js/flot/jquery.flot.js"></script>
+      
+      <script type="text/javascript" src="js/main.js"></script>
+
+
+  </body>
+</html>

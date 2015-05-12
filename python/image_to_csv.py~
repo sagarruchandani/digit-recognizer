@@ -19,7 +19,7 @@ def convertImage(filepath):
     basewidth = 28
     hsize = 28
     image_file = Image.open(filepath)
-    image_file= image_file.convert('L') # convert image to monochrome - this works
+    image_file= image_file.convert('1') # convert image to monochrome - this works
     image_file = image_file.resize((basewidth,hsize), Image.ANTIALIAS)
     pix_val = list(image_file.getdata())
     #pix_val = image_file.getdata()
@@ -56,7 +56,7 @@ output.write("\n")
 for x in pixels:
     print "%d" % (255-x)
     #output.write("pixel%d" % (255-x) )
-    output.write(str(x))
+    output.write(str(255-x))
     output.write(",")
 
 output.close()
